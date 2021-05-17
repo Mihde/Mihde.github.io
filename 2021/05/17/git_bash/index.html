@@ -9,7 +9,7 @@
     
     <title>
         
-            hexo |
+            git |
         
         Keep Theme
     </title>
@@ -118,7 +118,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">hexo</span>
+            <span class="title-hover-animation">git</span>
         </div>
 
         
@@ -136,7 +136,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-05-17 16:07:11
+        <i class="fas fa-edit"></i>&nbsp;2021-05-17 16:09:27
     </span>
     
     
@@ -153,35 +153,55 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">$ yarn global add hexo-cli</span><br></pre></td></tr></table></figure>
+            <h2 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h2><p><strong>创建版本库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> [url]   // 克隆远程版本库</span><br><span class="line">git init          // 初始化本地仓库</span><br></pre></td></tr></table></figure>
 
-<h3 id="初始化-hexo"><a href="#初始化-hexo" class="headerlink" title="初始化 hexo"></a>初始化 hexo</h3><p>创建一个文件夹, 用来书写和保存blog, 进入文件夹下执行初始化命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>在初始化时要保证目录下没有其他文件, 否则报错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ FATAL ~\Desktop\Refactor not empty, please run `hexo init` on an empty folder and <span class="keyword">then</span> copy your files into it</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-<p>可使用以下命令, 清空文件夹, 该命令会清除当前目录下的所有文件, 今生操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm rf *</span><br></pre></td></tr></table></figure>
-<p>或者使用以下命令直接创建并初始化目录, 不用单独创建文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;目录名称&gt;    目录名称不用夹引号, 例如 hexo init my_blog, 可直接创建并初始化my_blog文件夹</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>在初始化之后, 安装依赖, 保证项目的正常运行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install   简写 npm i</span><br><span class="line"></span><br><span class="line">$ yarn install   简写 yarn</span><br></pre></td></tr></table></figure>
 
-<h3 id="创建一个新的文档-Create-a-new-post"><a href="#创建一个新的文档-Create-a-new-post" class="headerlink" title="创建一个新的文档 (Create a new post)"></a>创建一个新的文档 (Create a new post)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p><strong>修改和提交</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git status     		        // 查看状态</span><br><span class="line">git diff       		        // 查看变更内容</span><br><span class="line">git add .      		        // 跟踪所有改动过的文件</span><br><span class="line">git add [file_name]   	    // 跟踪指定文件</span><br><span class="line">git mv [old_name][new_name] // 文件改名</span><br><span class="line">git rm [file_name]    	    // 删除文件</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="运行-预览效果-Run-server"><a href="#运行-预览效果-Run-server" class="headerlink" title="运行,预览效果 (Run server)"></a>运行,预览效果 (Run server)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server   简写 hexo s</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="生成静态文件-Generate-static-files"><a href="#生成静态文件-Generate-static-files" class="headerlink" title="生成静态文件 (Generate static files)"></a>生成静态文件 (Generate static files)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate  简写 hexo g</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="安装hexo-deployer-插件"><a href="#安装hexo-deployer-插件" class="headerlink" title="安装hexo-deployer 插件"></a>安装hexo-deployer 插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">$ yarn add hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p><strong>创建本地分支</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b [name]    // 创建并切换到该分支</span><br><span class="line">git branch [name]		  // 创建分支</span><br><span class="line">git checkout [name]       // 切换到某个分支</span><br></pre></td></tr></table></figure>
 
-<h3 id="部署到GitHub-Deploy-to-remote-sites"><a href="#部署到GitHub-Deploy-to-remote-sites" class="headerlink" title="部署到GitHub (Deploy to remote sites)"></a>部署到GitHub (Deploy to remote sites)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy  简写 hexo d</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+
+<p><strong>查看commit记录</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span>							// 查看所有的commit记录,(目前存在的分支, 不包括已删除的分支)</span><br><span class="line">git reset --hard [commit_id]	// 回退到某一个commit</span><br><span class="line">git reflog --data=iso			// reflog  可以查看所有分支的记录(包括已删除的分支), --date=iso  表示已标准时间格式展示</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>删除本地和远程分支</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -D [branchname]			  // 删除本地分支, D要大写</span><br><span class="line">git push origin --delete [branchname] // 删除远程分支</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>恢复删除的远程分支或回退到某一次commit</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span>                                     // 查看所有的commit记录</span><br><span class="line">git reset --hard [commit_id]  				// 回退到某一个commit</span><br><span class="line"></span><br><span class="line">git reflog --date=iso   					// 找到目标分支的最后一次commit</span><br><span class="line">git checkout -b [name_dev] [commit_id] 		// 恢复分支</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>代码暂存  stash</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git stash                 // 将代码修改存储到暂存区, 工作去会删除这些修改</span><br><span class="line">git stash save [message]  // 为暂存的修改, 加一个描述信息</span><br><span class="line"></span><br><span class="line">git stash pop          // 取出最近一次暂存的修改, 同时删除该条记录</span><br><span class="line">git stash show         // 查看最近一次的暂存的修改</span><br><span class="line"></span><br><span class="line">git stash list              // 查看暂存区的所有暂存修改</span><br><span class="line">git stash apply stash@&#123;X&#125;   // 取出相应的暂存, 不会删除对应的记录</span><br><span class="line">git stash drop stash@&#123;X&#125;    // 将记录列表中取出的对应暂存记录删除</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>查看git配置</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list      查看系统config     </span><br><span class="line"></span><br><span class="line">git config --global --list      查看当前用户(global)配置</span><br><span class="line"></span><br><span class="line">git config --local --list       查看当前仓库配置信息</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>解决问题</strong></p>
+<p>解决 <code>Failed to connect to github.com port 443: Timed out</code> 问题</p>
+<p>取消代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br></pre></td></tr></table></figure>
+
+<p>解决 <code>OpenSSL SSL_read: Connection was reset, errno 10054</code>  问题</p>
+<p>修改设置，解除<code>ssl</code>验证</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure>
+
 
         </div>
 
@@ -193,18 +213,33 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/05/17/git_bash/"
+                           href="/2021/05/17/nvm/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">git</span>
+                                <span class="post-nav-title-item">nvm</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
                     </div>
                 
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/05/17/hello-world/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">hexo</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 
             </div>
         
